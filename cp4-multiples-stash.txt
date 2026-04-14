@@ -1,0 +1,19 @@
+mathias@mathias-VirtualBox:~/Documentos/dev/actividad-6-7-git-stash-guardar-cambios-temporales-matchias$ git stash apply stash@{1}
+En la rama main
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     tarea.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        cp1-estado-inicial.txt
+        cp2-stash-list.txt
+        cp3-apply-vs-pop.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+git stash apply stash@{1}
+Es util poner mensajes descriptivos a los stashes porque permite saber fácilmente qué cambios contiene cada uno. Cuando hay varios stashes guardados, los mensajes ayudan a recordar qué trabajo es a cada stash y facilitan aplicar el correcto sin confundirse.

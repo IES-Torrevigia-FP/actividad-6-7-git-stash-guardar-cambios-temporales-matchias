@@ -1,0 +1,39 @@
+mathias@mathias-VirtualBox:~/Documentos/dev/actividad-6-7-git-stash-guardar-cambios-temporales-matchias$ git stash -u -m "Incluye archivo no trackeado"
+warning: in the working copy of 'cp1-estado-inicial.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'cp2-stash-list.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'cp3-apply-vs-pop.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'cp4-multiples-stash.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'notas-temporales.txt', LF will be replaced by CRLF the next time Git touches it
+Directorio de trabajo y estado de índice On main: Incluye archivo no trackeado guardados
+matchias$ git status
+git stash list
+En la rama main
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+nada para hacer commit, el árbol de trabajo está limpio
+stash@{0}: On main: Incluye archivo no trackeado
+stash@{1}: On main: WIP login paso 4
+stash@{2}: On main: WIP login pasos 1 y 2
+mathias@mathias-VirtualBox:~/Documentos/dev/actividad-6-7-git-stash-guardar-cambios-temporales-matchias$ git stash pop
+En la rama main
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     tarea.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        cp1-estado-inicial.txt
+        cp2-stash-list.txt
+        cp3-apply-vs-pop.txt
+        cp4-multiples-stash.txt
+        notas-temporales.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+Descartado refs/stash@{0} (3fc721a2536c6d8671ebaf31345aeb64e3ce425d)
+
+La diferencia entre git stash normal y git stash -u es que el comando normal solo guarda los cambios en archivos que ya están siendo seguidos por Git. git stash -u también guarda los archivos que aún no están siendo seguidos por Git permitiendo recuperar después esos archivos temporales junto con los demás cambios.

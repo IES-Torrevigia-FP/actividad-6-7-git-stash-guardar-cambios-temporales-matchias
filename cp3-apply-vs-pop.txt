@@ -1,0 +1,47 @@
+mathias@mathias-VirtualBox:~/Documentos/dev/actividad-6-7-git-stash-guardar-cambios-temporales-matchias$ git status
+git stash list
+En la rama main
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     tarea.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        cp1-estado-inicial.txt
+        cp2-stash-list.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+stash@{0}: On main: WIP login pasos 1 y 2
+
+mathias@mathias-VirtualBox:~/Documentos/dev/actividad-6-7-git-stash-guardar-cambios-temporales-matchias$ git stash pop
+error: Los cambios locales de los siguientes archivos serán sobrescritos al fusionar:
+        tarea.txt
+Por favor, confirma tus cambios o aguárdalos antes de fusionar.
+Abortando
+En la rama main
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+        modificados:     tarea.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que será confirmado)
+        cp1-estado-inicial.txt
+        cp2-stash-list.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+La entrada de stash se guardó en caso de ser necesario nuevamente.
+
+La diferencia entre git stash apply y git stash pop es que:
+
+git stash apply aplica los cambios guardados en el stash pero no elimina el stash, por lo que se puede volver a usar después.
+git stash pop aplica los cambios y elimina el stash automáticamente de la lista.
+
+Esto significa que apply es útil si quieres reutilizar el stash o probar los cambios, mientras que pop se usa cuando ya no necesitas guardar ese stash

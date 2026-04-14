@@ -1,0 +1,11 @@
+mathias@mathias-VirtualBox:~/Documentos/dev/actividad-6-7-git-stash-guardar-cambios-temporales-matchias$ git stash list
+stash@{0}: On main: WIP login pasos 1 y 2
+mathias@mathias-VirtualBox:~/Documentos/dev/actividad-6-7-git-stash-guardar-cambios-temporales-matchias$ git log --oneline --all
+cafb206 (hotfix) Aplica hotfix urgente
+d06ad44 (refs/stash) On main: WIP login pasos 1 y 2
+238c7cd index on main: 8baa7c8 Define tarea principal de login
+8baa7c8 (HEAD -> main) Define tarea principal de login
+ca5d634 (origin/main, origin/HEAD) add deadline
+e86c405 Initial commit
+
+Los cambios del login no se perdieron porque fueron guardados en el stash. Esto significa que Git almacenó temporalmente esos cambios y dejó el repositorio limpio para poder cambiar de rama y hacer el hotfix. Mientras trabajaba en la rama hotfix, mis cambios del login quedaron guardados en el stash sin afectar al repositorio.<
